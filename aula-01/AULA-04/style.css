@@ -46,7 +46,12 @@ body{
     text-decoration: none;
     font-size: 12px;
     letter-spacing: 5px;
+    transition: color .3s linear;
     
+}
+
+.hero-nav a:hover{
+    color: antiquewhite;
 }
 
 .portifolio{
@@ -120,8 +125,7 @@ body{
 .maps{
     width: 100%;
     height: 450px;
-    margin-top: 15px;
-    background-image: center;
+    margin-bottom: 50px;
 }
 
 .maps iframe{
