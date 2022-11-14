@@ -1,0 +1,140 @@
+body{
+    font-family: tahoma, arial, sans-serif;
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    width: 1024px;
+    margin: 20px auto;
+}
+
+.hero{
+    height: 50px;
+    background: #162028;
+    position: relative;
+}
+
+.logotipo{
+    margin: 5px 0 0 150px;
+}
+
+.hero-nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.hero-nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.hero-nav li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px;
+    padding: 13px;
+   
+}
+
+.hero-nav a{
+    color: #425564;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 5px;
+    
+}
+
+.portifolio{
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.titulo-01{
+    font-size: 36px;
+    color: #252525;
+}
+
+.portifolio p{
+    font-size: 16px;
+    line-height: 2;
+    color: #555;
+}
+
+.gallery{
+    color: #555;
+    padding: 0 100px 50px 100px;
+    overflow: auto;    
+}
+
+.gallery-card{
+    width: 32%;
+    float: left;
+    text-align: center;
+}
+
+.gallery-title{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.about{
+    background-color: #003d52;
+    padding: 100px;
+    color: antiquewhite;
+    background-image: url(imagens/bg_detalhe.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.about h2{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.about p{
+    line-height: 1.5;
+    width: 70%;
+}
+
+.contact{
+    margin: 50px 0;    
+}
+
+.contact address{
+    color: #143f52;
+    text-transform: uppercase;
+    font-size: 26px;
+    text-align: center;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.maps{
+    width: 100%;
+    height: 450px;
+    margin-top: 15px;
+    background-image: center;
+}
+
+.maps iframe{
+    width: 100%;
+}
+
+.rodape{
+    background: #0b171f;
+    padding: 25px;
+    font-size: 12px;
+    color: #6f8597;
+    text-align: center;
+    margin-top: 15px;
+    letter-spacing: 5px;
+}
+
