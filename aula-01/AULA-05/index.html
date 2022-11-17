@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        li ol{
+            height: 0;
+            overflow: hidden;
+            transition: height .5s;
+        }
+
+        li:hover{
+            background: #ccc;
+        }
+
+        li:hover ol{
+            height: 50px;
+        }
+
+        div{
+            padding: 2%;
+            margin: 2%;
+            border: 2px solid black;
+            width: 20%;
+            display: inline-block;
+            height: 100px;
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+
+        .div1{
+            overflow: visible;
+        }
+
+        
+        .div2{
+            overflow: hidden;
+        }
+
+        
+        .div3{
+            overflow: scroll;
+        }
+
+        
+        .div4{
+            overflow: auto;
+        }
+
+        body{
+            font-family: sans-serif;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            background: beige;
+        }
+
+        th{
+            background: rgb(236, 157, 157);
+            border: 3px solid chocolate;
+            padding: 15px;
+        }
+
+        td{
+            border: 2px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style> 
+
+</head>
+<body>
+    <h1>Listas de Definição e Aninhadas</h1>
+
+    <dl>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+
+    <dl>
+        <dt></dt>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+    </dl>
+
+    <dl>
+        <dt></dt>
+        <dt></dt>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+
+    <h2>Listas Aninhadas</h2>
+    <ul>
+        <li>item-01</li>
+        <li>item-02
+            <ol>
+               <li>item-2.1</li>
+               <li>item-2.2</li> 
+            </ol>
+        </li>
+        <li>item-03</li>
+    </ul>
+
+    <hr>
+    <h2>Listas de Definição</h2>
+
+    <dl>
+
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação de Hipertexto</dd>
+
+        <dt>CSS</dt>
+        <dd>Linguagem para criação de folhas de estilos</dd>
+
+    </dl>
+
+    <hr>
+
+    <dl>
+        <dt>WWW</dt>
+        <dt>internet</dt>
+        <dd>rede mundial de computadores</dd>
+
+        <dt>JavaScript</dt>
+        <dd>linguagem script para internet</dd>
+        <dd>script para rodar no browser</dd>
+    </dl>
+
+    <h2>overflow</h2>
+    <p>Valores possiveis: Visible, Hidden, Scrool, Auto</p>
+    <p>Overflow serve para tratar o contudo que exede do elemento</p>
+
+    <div class="div1">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur porro ipsam expedita nemo a minima magni enim facere veniam itaque! Ab doloremque beatae, at sit aliquid possimus repudiandae blanditiis exercitationem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda quo minus aliquid recusandae obcaecati nesciunt ipsam dolores impedit quisquam unde rerum error quaerat velit dignissimos quos quasi, ut accusantium nulla. </p>        
+    </div>
+
+    <div class="div2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sapiente libero dicta aliquam odit inventore quod? Quidem natus ipsum nobis accusantium voluptatem dolore aliquid non. Suscipit vitae consectetur ipsum doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet dolores quos officia quia, exercitationem vitae quo iure, recusandae eos voluptates deleniti, numquam rem totam deserunt quisquam sapiente corporis enim optio? </p>
+    </div>
+
+    <div>
+        <p class="div3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quasi exercitationem expedita libero ex accusamus blanditiis, reiciendis eum saepe perferendis, iusto delectus eos? Repellat odio, alias quasi aperiam impedit tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, voluptatem. Ad suscipit facilis incidunt nulla ipsam rem quae ab voluptate, tenetur ex repellendus quidem voluptates ullam quibusdam veniam dolores nostrum. </p>
+    </div>
+
+    <div class="div4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis porro placeat autem eum, eius beatae ratione veritatis. Assumenda officia iste laborum explicabo similique tempora amet ipsa. Rem, ullam laborum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum accusantium mollitia explicabo porro maxime ut quaerat id quod. Voluptas nemo id inventore quo est repellendus, corrupti sapiente dicta laudantium totam! </p>
+    </div>
+    <hr>
+
+    <h2>Como criar Tabelas para mostrar dados tabulares</h2>
+    <h3>Principais tags:table, tr, td</h3>
+
+    <table>
+        <tr>
+            <td>1A</td> <td>1B</td>            
+        </tr>
+        <tr>
+            <td>2A</td> <td>2B</td>
+        </tr>
+        <tr>
+            <td>3A</td> <td>3B</td>
+        </tr>
+    </table>
+    <hr>
+
+    <p>Colspan ou Rowspan para validar o html,como sendo duas colunas. Utilizado para mesclar duas linhas ou colunas</p>
+
+    <table>
+        <tr>
+            <td colspan="2">1A</td>             
+        </tr>
+        <tr>
+            <td>2A</td> <td>2B</td>
+        </tr>
+        <tr>
+            <td>3A</td> <td>3B</td>
+        </tr>
+    </table>
+    <hr>
+
+    
+    <table>
+        <tr>
+            <td rowspan="2">1A</td>
+            <td>1B</td>             
+        </tr>
+        <tr>
+             <td>2B</td>
+        </tr>
+        <tr>
+            <td>3A</td> <td>3B</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    
+    <table>
+        <tr>
+            <td>1A</td> 
+            <td rowspan="2">1B</td>                        
+        </tr>
+        <tr>
+             <td>2A</td>
+        </tr>
+        <tr>
+            <td>3A</td> <td>3B</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3>Table Header</h3>
+
+    <table>
+        <tr>
+            <th>1A</th> <th>1B</th>
+        </tr>
+        <tr>
+            <td>2A</td> <td>2B</td>
+        </tr>
+        <tr>
+            <td>3A</td> <td>3B</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3>Table Header e Table Body</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>1A</th> <th>1B</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2A</td> <td>2B</td> 
+            </tr>
+            <tr>
+                <td>3A</td> <td>3B</td> 
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <p>ATENÇÃO AO TABLE FOOTER:TEM QUE SEGUIR ESTA ORDEM</p>
+
+    <table>
+        <thead>            
+            <tr>
+                <th>1A</th> <th>1B</th> 
+            </tr>
+        </thead>
+        <tfoot>            
+            <tr>
+                <td colspan="2">2A</td>  
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>3A</td> <td>3B</td> 
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <p>tabelas na pratica</p>
+
+    <table>
+        <caption>Tabela de preços de cursos</caption>
+        <thead>
+            <tr>
+                <th>Area</th>
+                <th>Cursos</th>
+                <th>Investimento</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="3">Valores sujeitos a alterações sem prévio aviso</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td rowspan="3">Design</td>
+                <td>InDesing</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+            <tr>                 
+                <td>Fhotoshop</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+            <tr>                
+                <td>Illustrator</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+            <tr>
+                <td rowspan="4">Development</td>
+                <td>HTML</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+            <tr> 
+                <td>CSS</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+            <tr> 
+                <td>JavaScript</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+            <tr> 
+                <td>PHP</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        html, body{
+            height: 100%;
+        }
+
+        body{
+            background-image: linear-gradient(to right bottom, red, blue);
+        }
+        .radius{
+            background: orange;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            border-radius: 100px;
+            box-shadow: -10px -10px 10px black, 10px 10px 0 red, -5px -5px 0 10px blue;
+        }
+
+        p{
+            font-size: 30px;
+        }
+        
+        #radius{
+            background: red;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            border-radius: 50px 10px 200px 20px / 30px 60px;
+            box-shadow: 15px 15px 15px black;
+        }
+
+
+        .txt{
+            font-family: sans-serif;
+            font-size: 60px;
+            text-align: center;
+            text-shadow: -1px 1px 0 #5d5d5d,
+            -2px 2px 0 #727272, -3px 3px 0
+            #868686, -4px 4px 0 #a3a3a3,
+            -5px 5px 0 #bcbcbc;
+        }
+
+        .transform{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            transition-property: width, height;
+            transition-duration: .5s, 1s;
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-delay: 0s, .8s;
+            margin-bottom: 400px;
+            margin-left: 200px;            
+        }
+
+        .transform:hover{
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="txt">Efeitos legais com CSS</h1>
+    <p>Border-radius, Box-shadow, Text-shadow, Gradientes lineares, Fontes customizadas, Transições</p>
+    <p>fontes customizadas utiliza url para importar na pagina " local para fonts free ,font squirrel,"</p>
+
+    <div class="radius"></div>
+    <div id="radius"></div>
+    <div class="transform">Transições,vai no google na pagina "cubic-bezier"</div>
+    
+</body>
+</html>
