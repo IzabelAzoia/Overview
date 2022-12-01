@@ -1,0 +1,158 @@
+
+@charset "UTF-8";
+
+html{
+    font-family: sans-serif;
+}
+h1, h2, h3, h4{
+    font-family: "Oxygen";
+}
+.clearfix::after, .row::after{
+    content: ' ';
+    display: block;
+    clear: both;
+}
+.button{
+    display: inline-block;
+    padding: .75em 1.5em;
+    background: rgb(90, 182, 189);
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+.button:hover{
+    background-color: #37a0a0;
+}
+.top-header{
+   text-align: center;
+}
+.top-header-logo{
+    margin: .5em;
+}
+.top-nav{
+    background: #612674;
+    text-align: center;
+}
+.top-nav ul{
+    margin: 0;
+    padding: 1em;
+    list-style: none;
+}
+.top-nav a{
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+}
+.top-nav a:hover{
+    background: #7c3792;
+}
+.top-content{
+    padding: 1em;
+    text-align: center;
+    background: #f6f6f6;
+}
+.top-content-title{
+    color: #612674;
+    font-size: 1.37em;
+    margin: 1.37em;
+}
+.top-content-subtitle{
+    color: #a87bb7;
+    font-size: 1em;
+    line-height: 1.5;
+}
+.middle-content{
+    padding: 2em;
+    background: #f6f6f6;
+    text-align: center; 
+}
+.middle-content-title{
+    font-size: 1.25em;
+    color: #652e78;
+    text-transform: uppercase;
+}
+.middle-content p{
+    line-height: 1.5;
+    color: #222;
+}
+.middle-content img{
+    font-size: 3.5em;
+    color: #652e78;
+}
+.main-content{
+    padding: 2em;
+}
+.main-content p{
+    line-height: 1.2;
+}
+.main-content-title{
+    font-size: 1.25em;
+    color: #652e78;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+.main-content-article{
+    margin-bottom: 3.5em;
+}
+
+.hidden{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    display: block;
+}
+.rodape{
+    background: #25303e;
+    color: #83969f;
+    text-align: center;
+     
+}
+.rodape-menushare{
+    background-color: #303d4c;
+    padding: .5em;
+}
+ 
+.rodape-menushare li{
+    display: inline-block;
+    margin: 0 1em;
+}
+.rodape-menushare img{
+    font-size: 1.1em;
+    text-decoration: none;
+    color: white;
+}
+@media screen and (min-width: 48.75em) {   
+
+    .top-header-logo{
+        float: left;
+    }
+    .top-nav{
+        background: transparent;
+        float: right;
+    }
+    .top-nav ul{
+        margin: 0;
+        padding: 0;
+    }
+    .top-nav li{
+        display: inline-block;
+    }
+    .top-nav a{
+        color: #713a84;
+    }
+    .top-nav a:hover{
+        background: #e7d9fc;
+    } 
+    .top-content{
+        background: #521a66;        
+    }
+    .top-content-title, .top-content-subtitle{
+        color: white;
+    }
+    .col-1-4{
+        width: 44%;
+        margin: 3%;
+    }
+}

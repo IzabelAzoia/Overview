@@ -5,78 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,700&family=VT323&display=swap');"> 
+
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    
+
 </head>
 <body>
 
     <header class="main-header">
-        <a href="index.html" class="main-header-link">
-            <img src="#" alt="texto qualquer">
+        <a href="index.html" class="main-header-link imagem-link">
+            <img src="imagens/fulls/foto-Izabel.jpg" alt="texto qualquer">
         </a>
-        <h1>
+        <h1 class="main-header-title">
             Trabalhos e viagens de <br>
             <strong>Maria Izabel Castro Azoia</strong>,<br>
-            uma pessoa que vive no planeta Terra <br>
-            Retirado de <a href="http://html5up.net"> html5up.net</a>.
+            Uma pessoa que vive no <br> planeta Terra, Brasil, Paraná.            
         </h1>
+        <p>
+            Retirado de <a href="http://html5up.net" class="main-header-link"> html5up.net</a>.
+        </p>
     </header>
     <main class="main-content">
 
         <section class="main-content-section">
-            <h2>Quando o header é aside eo aside é no header</h2>
+            <h2>Quando o header é aside e o aside é no header</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatum dolore ex possimus maxime sit exercitationem et! Eum distinctio sint dicta consectetur aliquid praesentium qui beatae, officiis laudantium doloremque dolores?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam delectus natus cumque minima assumenda impedit veritatis laboriosam. Quo quidem nihil illum cupiditate atque aspernatur placeat eius! Unde explicabo Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, aliquam. Nam tempora, repellendus optio, asperiores nobis nisi explicabo dolores voluptatum voluptas alias maiores. Reiciendis facilis animi repellat id illum possimus.</p>
 
-            <a href="#" title="Veja mais" class="button-default">Veja Mais</a>
+            <a href="#" title="Veja mais" class="button-default button-default-stroke">Veja Mais</a>
         </section>
 
         <section class="main-content-section">
             <h3>Recent Works</h3>
-            <article class="recent-worcks-card">
-                <a href="imagens/fulls/01.jpg">
-                    <img src="imagens/thumbs/01.jpg" title="descrição" alt="">
-                </a>
-                <p class="recent-worcks-card-title">Magna sed consequat tempus</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </article>
+
+            <div class="row">
+                <div class="col-2">                    
+                    <article class="recent-works-card">
+                        <a class="imagem-link" href="imagens/fulls/01.jpg">
+                            <img src="imagens/thumbs/01.jpg" alt="descrição">
+                        </a>
+                        <p class="recent-worcks-card-title">Magna sed consequat tempus</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </article>
             
-            <article class="recent-worcks-card">
-                <a href="imagens/fulls/02.jpg">
-                    <img src="imagens/thumbs/02.jpg" title="descrição" alt="">
-                </a>
-                <p class="recent-worcks-card-title">Ultricies lacinia interdum</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </article>
+                    <article class="recent-works-card">
+                        <a class="imagem-link" href="imagens/fulls/02.jpg">
+                        <img src="imagens/thumbs/02.jpg" alt="descrição">
+                        </a>
+                        <p class="recent-worcks-card-title">Ultricies lacinia interdum</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </article>
             
-            <article class="recent-worcks-card">
-                <a href="imagens/fulls/03.jpg">
-                    <img src="imagens/thumbs/03.jpg" title="descrição" alt="">
-                </a>
-                <p class="recent-worcks-card-title">Tortor metus commodo</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </article>
+                    <article class="recent-works-card">
+                        <a class="imagem-link" href="imagens/fulls/03.jpg">
+                            <img src="imagens/thumbs/03.jpg" alt="descrição">
+                        </a>
+                        <p class="recent-worcks-card-title">Tortor metus commodo</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </article>
+                </div>
+                <div class="col-2">                    
+                    <article class="recent-works-card">
+                        <a class="imagem-link" href="imagens/fulls/04.jpg">
+                            <img src="imagens/thumbs/04.jpg" alt="descrição">
+                        </a>
+                        <p class="recent-worcks-card-title">Quam neque phasellus</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </article>
             
-            <article class="recent-worcks-card">
-                <a href="imagens/fulls/04.jpg">
-                    <img src="imagens/thumbs/04.jpg" title="descrição" alt="">
-                </a>
-                <p class="recent-worcks-card-title">Quam neque phasellus</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </article>
+                    <article class="recent-works-card">
+                        <a class="imagem-link" href="imagens/fulls/05.jpg">
+                            <img src="imagens/thumbs/05.jpg" alt="descrição">
+                        </a>
+                        <p class="recent-worcks-card-title">Nunc enim commodo aliquet</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </article>
             
-            <article class="recent-worcks-card">
-                <a href="imagens/fulls/05.jpg">
-                    <img src="imagens/thumbs/05.jpg" title="descrição" alt="">
-                </a>
-                <p class="recent-worcks-card-title">Nunc enim commodo aliquet</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </article>
-            
-            <article class="recent-worcks-card">
-                <a href="imagens/fulls/06.jpg">
-                    <img src="imagens/thumbs/06.jpg" title="descrição" alt="">
-                </a>
-                <p class="recent-worcks-card-title">Risus ornare lacinia</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </article>
+                    <article class="recent-works-card">
+                        <a class="imagem-link" href="imagens/fulls/06.jpg">
+                        <img src="imagens/thumbs/06.jpg" alt="descrição">
+                        </a>
+                        <p class="recent-worcks-card-title">Risus ornare lacinia</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </article>
+                </div>
+            </div>            
 
             <a href="#" title="Veja Portifolio Completo" classe="button-default">Veja Portifolio Completo</a>
         </section>
@@ -86,36 +104,49 @@
 
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, praesentium nesciunt? Sequi harum non placeat laborum odio voluptate fuga quaerat perferendis autem molestias dolorem, totam eius maxime, saepe ipsam fugiat.</p>
 
-            <form action="#" method="post">
-
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome">
+            <div class="row">
+                <div class="col-2-3">                    
+                    <form action="#" method="post">
+                        <div class="row">
+                            <div class="col-2">                                
+                                <label for="nome">Nome</label>
+                                <input placeholder="Nome completo" type="text" name="nome" id="nome">
+                            </div>
+                            <div class="col-2">                                    
+                                <label for="nome">Email</label>
+                                <input type="text" name="email" id="email">
+                            </div>
+                        </div>                
                 
-                <label for="nome">Email</label>
-                <input type="text" name="email" id="email">
-                
-                <label for="nome">Digite sua Mensagem</label>
-                <input type="text" name="mensagem" id="mensagem">
+                        <label for="nome">Digite sua Mensagem</label>
+                        <input type="text" name="mensagem" id="mensagem">
 
-                <input type="submit" value="Enviar">
-            </form>
+                        <input type="submit" value="Enviar" class="button-default button-default-stroke button-default-big">
+                    </form>
+                </div>
 
-            <address>
-                <p>
-                    <span>Endereço</span>
-                    1234 Somewhere Rd. Nashville, TN 00000 United States
-                </p>
+                <div class="col-1-3">                    
+                    <address>
+                        <p>
+                            <span>Endereço: </span>
+                            1234 Somewhere Rd. Nashville, TN 00000 United States
+                        </p>
 
-                <p>
-                    <span>Telefone</span>
-                    000-000-000
-                </p>
+                        <p>
+                            <span>Telefone: </span>
+                         000-000-000
+                        </p>
 
-                <p>
-                    <span>E-mail</span>
-                    email@server.com
-                </p>
-            </address>
+                        <p>
+                            <span>E-mail: </span>
+                            email@server.com
+                        </p>
+                    </address>
+
+                </div>
+            </div>
+
+
         </section>
 
         <section class="main-content-section">
@@ -124,8 +155,16 @@
             <h4>Text</h4>
             <p>Lorem ipsum <b>dolor</b> sit amet <strong>strong</strong> consectetur <i>italic</i> adipisicing elit. Est itaque error consectetur esse ab laborum vel quibusdam <em>emphasized</em> veritatis at <sup>superscript</sup> ratione unde rem, quisquam <sub>subscript</sub> aliquam, <u>underline</u> corrupti molestiae, <code>code: for (;;) {...}</code> ipsam cumque eius <a href="#"> a link</a> voluptatibus.</p>
 
+            <h1>tituloh1</h1>
+            <h2>tituloh2</h2>
+            <h3>tituloh3</h3>
+            <h4>tituloh4</h4>
+            <h5>tituloh5</h5>
+            <h6>tituloh6</h6>
+             
+
             <blockquote cite="http://developer.mozilla.org">
-                <p>Esta é uma citação tirada da Mozilla Developer Center.</p>
+                <p> Esta é uma citação tirada da Mozilla Developer Center.</p>
             </blockquote>
 
             <p>
@@ -134,46 +173,274 @@
             </p>
 
             <h4>Preformatado</h4>
-
-            <pre>
-                <code>
+            <pre><code>
                     &lt;script&gt;
                         alert("oi");
                     &lt/script&gt;    
-                </code>
-            </pre>
+                </code></pre>
 
             <h4>Listas</h4>
 
-            <h5>Não Ordenadas</h5>
-            <ul>
-                <li>Item 1</li>
-                <li>Item 1</li>
-                <li>Item 1</li>
-            </ul>
+            <div class="row">
+                <div class="col-2">
+                    <h5>Não Ordenadas</h5>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 1</li>
+                        <li>Item 1</li>
+                    </ul>                    
+        
+                    <h5>Ordenadas</h5>
+                    <ol>
+                        <li>Item 1</li>
+                        <li>Item 1</li>
+                        <li>Item 1</li>
+                    </ol>
+                </div>
+                <div class="col-2"> 
+                    <h5>Alternate</h5>
+                    <ul class="ul-alternate">
+                        <li>Item 1</li>
+                        <li>Item 1</li>
+                        <li>Item 1</li>
+                    </ul>
+        
+                    <h5>Icons</h5>        
+                    <ul class="ul-icons">
+                        <li><span class="hidden">Twitter</span><i class="fab fa-twitter"></i></li>
+                        <li><span class="hidden">Facebook</span><i class="fab fa-facebook-square"></i></li>
+                    </ul>
+                </div>
+            </div>          
+        
+            <h4>Ations</h4>
             
-            <h4>Listas</h4>
-
-            <h5>Ordenadas</h5>
-            <ul>
-                <li>Item 1</li>
-                <li>Item 1</li>
-                <li>Item 1</li>
-            </ul>
+            <div class="row">
+                <div class="col-2">
+                    <p>
+                        <a href="#" class="button-default">Default</a>
+                        <a href="#" class="button-default button-default-stroke">Default</a>
+                    </p>
             
-            <h4>Listas</h4>
+                    <p>
+                        <a href="#" class="button-default button-default-small">Small</a>
+                        <a href="#" class="button-default button-default-small button-default-stroke">Small</a>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <a href="#" class="button-default button-default-full">Default</a>
+                        <a href="#" class="button-default button-default-ful button-default-stroke">Default</a>
+                    </p>
+            
+                    <p>
+                        <a href="#" class="button-default button-default-full button-default-small">Default</a>
+                        <a href="#" class="button-default button-default-ful button-default-small button-default-stroke">Default</a>
+                        </p>
+                </div>
+            </div>
+            
+            
+            <h4>Table</h4>
+            <h5>Default</h5>
 
-            <h5>Alternate</h5>
-            <ul>
-                <li>Item 1</li>
-                <li>Item 1</li>
-                <li>Item 1</li>
-            </ul>
-             
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>R$ 100.00</td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Item One</td>
+                            <td>Ante turpis interger aliquet porttitor</td>
+                            <td>R$29.99</td>                         
+                        </tr>
+                    
+                        <tr>
+                            <td>Item Two</td>
+                            <td>Ante turpis interger aliquet porttitor</td>
+                            <td>R$19.99</td>                         
+                        </tr>
+                    
+                        <tr>
+                            <td>Item Thee</td>
+                            <td>Ante turpis interger aliquet porttitor</td>
+                            <td>R$29.99</td>                         
+                        </tr>
+                    
+                        <tr>
+                            <td>Item Four</td>
+                            <td>Ante turpis interger aliquet porttitor</td>
+                            <td>R$29.99</td>                         
+                        </tr>
+                    
+                        <tr>
+                            <td>Item Five</td>
+                            <td>Ante turpis interger aliquet porttitor</td>
+                            <td>R$29.99</td>                         
+                        </tr>
+                    </tbody>
 
+                </table>
+
+                <h5>Alternate</h5>
+
+                <table class="table table-alternate">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>R$1000.00</td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Item One</td>
+                            <td>Ante turpis integer aliquet porttitor</td>
+                            <td>R$29.99</td>                         
+                        </tr>
+                    
+                    
+                        <tr>
+                            <td>Item Two</td>
+                            <td>Ante turpis interger aliquet porttitor</td>
+                            <td>R$19.99</td>                         
+                        </tr>
+                    
+                        <tr>
+                            <td>Item One</td>
+                            <td>Ante turpis interger aliquet porttitor</td>
+                            <td>R$29.99</td>                         
+                        </tr>
+                    
+                        <tr>
+                            <td>Item One</td>
+                            <td>Ante turpis interger aliquet porttitor</td>
+                            <td>R$29.99</td>                         
+                        </tr>
+                    
+                        <tr>
+                            <td>Item One</td>
+                            <td>Ante turpis interger aliquet porttitor</td>
+                            <td>R$29.99</td>                         
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            
+                <h4>Buttons</h4>
+                <p>
+                    <button href="#" class="button-default">Default</button>
+                    <button href="#" class="button-default button-default-stroke">Default</button>
+                </p>
+            
+                <p>
+                    <button href="#" class="button-default button-default-small">Small</button>
+                    <button href="#" class="button-default button-default-small button-default-stroke">Small</button>
+                </p>
+            
+                <p>
+                    <button href="#" class="button-default button-default-full">Default</button>
+                    <button href="#" class="button-default button-default-ful button-default-stroke">Default</button>
+                </p>
+            
+                <p>
+                    <button href="#" class="button-default button-default-full button-default-small">Default</button>
+                    <button  class="button-default button-default-ful button-default-small button-default-stroke">Default</button>
+                </p>
+                <input type="submit" class="button-default button-default-stroke" value="Enviar">
+
+                <h4>Forms</h4>
+
+                <form action="#" method="post">
+                    <label for="name">Nome</label>
+                    <input type="text" name="nome" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+
+                    <select name="" id="">
+                        <option value="0">Selecione ...</option>
+                        <option value="1">HTML</option>
+                        <option value="2">CSS</option>
+                        <option value="3">JavaScript</option>
+                    </select>
+
+                    <label for=""><input type="radio" value="baixa" name="prioridade">Baixa Prioridade</label>                
+                    <label for=""><input type="radio" value="média" name="prioridade">Média Prioridade</label>                
+                    <label for=""><input type="radio" value="alta" name="prioridade">Alta Prioridade</label>
+                
+                    <label for=""><input type="checkbox" name="copy" value="1">Envie-me uma cópia</label>
+                    <label for=""><input type="checkbox" name="human" value="1">Sou Humano</label>
+
+                    <label for="msg">Mensagem</label>
+                    <textarea placeholder="digite uma mensagem" id="msg" cols="30" rows="10"></textarea>
+
+                    <input type="submit" class="button-default button-default-big" value="Enviar">
+                    <input type="reset" class="button-default button-default-stroke button-default-big" value="Limpar">                 
+                    </section>
+                </form>
+
+            <section class="main-content-section">
+                <h3>Imagens</h3>
+
+                <div class="gallery-img">
+                    <img src="imagens/fulls/05.jpg" alt="">
+                </div>
+
+                <div class="gallery-thumb row">
+                    <img class="col-1-3" src="imagens/thumbs/01.jpg" alt="">
+                    <img class="col-1-3" src="imagens/thumbs/02.jpg" alt="">
+                    <img class="col-1-3" src="imagens/thumbs/03.jpg" alt="">
+                    <img class="col-1-3"src="imagens/thumbs/04.jpg" alt="">
+                    <img class="col-1-3"src="imagens/thumbs/05.jpg" alt="">
+                    <img class="col-1-3"src="imagens/thumbs/06.jpg" alt="">
+                    <img class="col-1-3"src="imagens/thumbs/01.jpg" alt="">
+                    <img class="col-1-3"src="imagens/thumbs/02.jpg" alt="">
+                    <img class="col-1-3"src="imagens/thumbs/03.jpg" alt="">                    
+                </div>
+
+                <h3>Leaft &amp; Right</h3>
+                <div class="content-foto">
+                    
+                    <img src="imagens/fulls/foto-Izabel.jpg" alt="" class="img-left">
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nobis culpa modi, nisi ipsa minima distinctio at obcaecati, inventore asperiores in. Unde commodi, laborum quisquam nam veniam ipsa suscipit aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum saepe quisquam sequi pariatur tempora voluptatum animi sunt repellendus, voluptate voluptates maxime amet optio soluta nobis obcaecati laudantium aut provident dolores!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, sed vel. Optio modi sequi quisquam necessitatibus, laborum voluptatem dignissimos neque veniam eius aperiam ipsum quaerat nihil repellat natus, explicabo Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quod, non necessitatibus soluta quam ex numquam, eligendi ipsam saepe alias inventore repellendus sapiente quisquam officia facere provident quas dolor tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, facilis doloribus commodi soluta eveniet officia porro est, deserunt non similique ut necessitatibus consequuntur et! Quidem beatae corporis excepturi accusamus praesentium? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet tempore similique sint facilis ratione molestiae ab, minima quis laborum incidunt rem quidem optio nisi vero maxime aliquid, nulla reprehenderit ex?</p>
+                    
+                </div>
+                <div class="content-foto">                     
+                    <img src="imagens/fulls/foto-Izabel.jpg" alt="" class="img-right">
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nobis culpa modi, nisi ipsa minima distinctio at obcaecati, inventore asperiores in. Unde commodi, laborum quisquam nam veniam ipsa suscipit aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum saepe quisquam sequi pariatur tempora voluptatum animi sunt repellendus, voluptate voluptates maxime amet optio soluta nobis obcaecati laudantium aut provident dolores!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, sed vel. Optio modi sequi quisquam necessitatibus, laborum voluptatem dignissimos neque veniam eius aperiam ipsum quaerat nihil repellat natus, explicabo Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quod, non necessitatibus soluta quam ex numquam, eligendi ipsam saepe alias inventore repellendus sapiente quisquam officia facere provident quas dolor tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, facilis doloribus commodi soluta eveniet officia porro est, deserunt non similique ut necessitatibus consequuntur et! Quidem beatae corporis excepturi accusamus praesentium? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet tempore similique sint facilis ratione molestiae ab, minima quis laborum incidunt rem quidem optio nisi vero maxime aliquid, nulla reprehenderit ex?</p>
+                </div>
+                        
+            </section>        
         </section>
     </main>
-    <footer class="main-footer"></footer>
+        <footer class="main-footer">
+            <ul class="ul-icons">
+                <li><a href="#" class="icon-link"><span class="hidden">Twitter</span><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" class="icon-link"><span class="hidden">Facebookr</span><i class="fab fa-facebook-square"></i></a></li>
+                </ul>
+            <ul class="copyright">
+                <li>@ Untitled</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
     
 </body>
 </html>

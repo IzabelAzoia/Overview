@@ -1,0 +1,198 @@
+ 
+
+
+article:nth-child(1) a{
+    color: red;    
+}
+
+
+article:nth-child(3) > p{
+    color: red;    
+}
+
+article:nth-child(5) h3{
+    margin-top: 50px;    
+}
+
+article:nth-child(7) h3{
+    color: orange;    
+}
+
+article:not(.destaque){
+    color: orange;    
+}
+
+.destaque{
+    background: rgb(74, 74, 46);
+}
+a[href="#"]{
+    opacity: .2;
+}
+
+a[href^="http"]{
+    color: red;
+}
+
+a[title]{
+   color: green; 
+}
+
+a[href$=".pdf"]{
+    text-decoration: none;
+}
+
+div{
+    border: 3px solid red;
+    padding: 25px;
+    position: relative;
+}
+
+.box-div::before{
+    content:"before:";
+    background: #ccc;
+}
+ 
+
+.box-div::after{
+    content: "";
+    background: rgb(215, 112, 112);
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+input[type="checkbox"]{
+    width: 100px;
+    height: 100px;
+}
+input[type="checkbox"]:checked{
+    width: 50px;
+    height: 50px;
+}
+button:disabled{
+    background: rgb(202, 202, 235);
+}  
+input{
+    display: block;
+}
+
+input[type="text"]:focus{
+    background: #ccc;    
+}
+
+a:focus, a:hover, div:focus{
+    background: red;
+}
+input::placeholder{
+    color: cadetblue;
+}
+input:read-only{
+    background: yellow;
+}
+input:disabled{
+    background: #ccc;
+}
+div p:nth-of-type(3){
+    color: aqua;
+} 
+
+p::first-letter{  
+    font-size: 3em;
+    line-height: 1;
+    display: inline-block;
+    margin-right: .1em;
+}
+p::first-line{
+    color: chartreuse;
+}
+p::selection{
+    background: yellowgreen;
+}
+
+p::-moz-selection{
+    background: yellowgreen;
+}
+
+.div-transform-01{
+    width: 150px;
+    height: 50px;
+    background: yellow;
+    transform: translateX(50px);
+}
+.div-transform-02{
+    width: 150px;
+    height: 50px;
+    background: blue;
+    position: relative;
+    left: 50%;
+} 
+.div-transform-03{
+    width: 50%;
+    overflow: hidden;
+    border: solid 2px black;
+}
+.div-transform-04{
+    background: rgb(122, 122, 103);
+    transform: translate(80%, 25px);
+}
+
+.div-transform-05{
+    width: 50%;
+    overflow: hidden;
+    border: solid 2px black;
+}
+.div-transform-06{
+    background: yellow;
+    transform: rotate(-25deg);
+}
+
+.div-transform-07{
+    width: 50%;
+    overflow: hidden;
+    border: solid 2px black;
+}
+.div-transform-08{
+    background: rgb(234, 234, 132);
+    transform: rotate(30deg);
+    transform-origin: left top;
+}
+
+.div-transform-09{
+    width: 50%;
+    overflow: hidden;
+    border: solid 2px black;
+}
+.div-transform-10{
+    background: rgb(234, 234, 132);
+    transform: rotate(30deg) translate(50%);     
+}
+
+.div-transform-11{
+    width: 50%;
+    overflow: hidden;
+    border: solid 2px black;
+}
+.div-transform-12{
+    background: rgb(234, 234, 132);
+    transform: translate(50%) rotate(30deg); 
+}
+
+.div-transform-13{
+    width: 100px;
+    height: 100px;
+    background: orange;
+    transform: skew(-30deg, 50deg); 
+}
+.div-transform-14{
+    width: 100px;
+    height: 100px;
+    background: rgb(140, 108, 203);
+    transform: scale(.5);
+    left: 50%;
+    transition: transform .5s; 
+}
+.div-transform-14:hover{
+    transform: scale(2);
+}

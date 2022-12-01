@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        label{
+            margin-right: 25px;
+        }
+        label span{
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            background: #ccc;
+            border-radius: 15px;
+        }
+        label span::before{
+            content: '';
+            display: block;
+            background: #eee;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 5px;
+            transition: all .2s ease-in-out;
+        }
+        label input:checked + span::before{
+            transform: translateX(30px);
+            background: greenyellow;
+        }
+        label input:focus + span{ 
+            box-shadow: 0 0 0 2px greenyellow;
+        }
+        input{
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        a{
+            display: block;
+            margin: 10px;
+            position: relative;
+        }
+        a img{
+            width: 50%;
+            display: block;
+        }
+        a::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: transparent;
+            transition: all .5s;
+        }
+        a:hover::before{            
+            background: rgba(0, 0, 0, .5);
+        }
+        a::after{
+            opacity: 0;
+        }
+        a:hover::after{
+            content: 'Veja mais';
+            display: block;
+            position: absolute;
+            border: 3px solid white;
+            color: white;
+            top: 50%;
+            left: 50%;
+            padding: 10px 20px;
+            transform: translate(-100%, -100%);
+            opacity: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Estrutura Basica</h1>
+    <label>
+        <input type="checkbox">
+        <span></span>
+        Esportes
+    </label>
+    
+    <label>
+        <input type="checkbox">
+        <span></span>
+        Politica
+    </label>
+    
+    <label>
+        <input type="checkbox">
+        <span></span>
+        Educação
+    </label>
+
+    <section>
+        <article>
+            <a href="#"><img src="thumbs/thumbs/01.jpg" alt=""></a>
+        </article>
+        
+        <article>
+            <a href="#"><img src="thumbs/thumbs/02.jpg" alt=""></a>
+        </article>
+        
+        <article>
+            <a href="#"><img src="thumbs/thumbs/03.jpg" alt=""></a>
+        </article>
+        
+        <article>
+            <a href="#"><img src="thumbs/thumbs/04.jpg" alt=""></a>
+        </article>
+        
+        <article>
+            <a href="#"><img src="thumbs/thumbs/05.jpg" alt=""></a>
+        </article>
+        
+        <article>
+            <a href="#"><img src="thumbs/thumbs/06.jpg" alt=""></a>
+        </article>
+    </section> 
+</body>
+</html>

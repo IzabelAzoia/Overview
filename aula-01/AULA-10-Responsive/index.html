@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta Name="viewport" content="width=device-width">
+
+    <style>
+        body{
+            background: yellow;
+            font-size: 16px;
+        }
+        /**.teste{
+             background: red;
+             width: 320px;
+             height: 50px;
+        }**/
+        .container{
+            background: white;
+            padding: 150px;
+            font-size: 24px;
+            width: 700px;
+             
+        }
+        .container div{
+            background: #ccc;
+            margin-bottom: 15px;
+            height: 150px;
+            font-size: 22px;
+            float: left;             
+             
+        }
+        .clearfix::after{
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+        @media screen and (min-width: 400px){
+            body{
+                background: orange;
+            }
+            .container div{
+                margin: 10px;
+                width: calc(50% - 20px);
+                float: left;
+            }
+        }
+        h2{
+            text-align: center;
+        }
+        .content{
+            border: 1px solid black;
+            padding: 1em;
+            width: 20em;
+            margin: auto;
+            font-size: 2em;
+        }
+        p{
+            margin: 0;
+            line-height: 1.5;
+            font-size: 1.25em;
+        }
+        a{
+            font-size: 24px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Media Queries</h1>
+    <p>Dia de lua-minguante</p>
+    <!--<div class="teste"></div>-->
+    <div class="container clearfix">
+        <div>div-1</div>
+        <div>div-2</div>
+    </div>
+    <h2>Unidade de Medidas</h2>
+    <div class="content">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero illo cupiditate aliquid at voluptas quasi deserunt accusamus! Accusantium nam vero, aut laboriosam blanditiis natus eum sit nulla mollitia consectetur temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#"> Accusamus aliquid error eos aliquam voluptatum </a>expedita delectus vitae pariatur qui praesentium itaque inventore tenetur, debitis, obcaecati nostrum officia doloremque soluta nihil!
+        </p>
+    </div>
+
+</body>
+</html>
