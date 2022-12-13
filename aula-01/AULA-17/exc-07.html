@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Problema</h1>
+    <p>Pedir para o usuario digitar dois numeros e mostrar uma mensagem informando se foi aprovado ou não. A nota de corte é 5</p>
+    <h2> Controle de decisão</h2>
+    <p>Se nota > 5</p>
+    <p>Mostra mensagem de parabéns</p>
+    <p>Senão</p>
+    <p>Mostra mensagem de Reprovado</p>
+    
+    <script>
+        
+        
+        // <!-- pedir para o usuario digitar um numero  --> 
+        var num1 = prompt('Digite um numero');
+        // <!-- converter em numero inteiro  -->
+        num1 = parseInt(num1);    
+        // <!-- pedir para o usuario digitar outro numero  -->
+        var num2 = prompt('Digite outro numero');
+        // <!-- converter em numero inteiro  -->
+        num2 = parseInt(num2);
+        // mostrar num alert um bolean indicando que a media for maior que 5 
+        var media = (num1 + num2) / 2;
+         
+        if(media > 5){
+            // bloco verdade
+            alert("Parabéns! Você foi aprovado");
+        } 
+        else {
+            // bloco falso
+            alert("Desculpe! mas não foi dessa vez");
+        }
+ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid-conteiner{
+        width: 300px;
+        background: #ccc;
+    }
+    .grid-item{
+        background: #999;
+        font-size: 2em;
+        font-family: sans-serif;
+        padding: 5px 15px;
+    }
+    .grid-item:nth-child(even){
+        background: #999;
+        color: white;
+    }
+    .grid-item:nth-child(odd){
+        background: #eee;
+    }
+    /* Grid */
+    .grid-conteiner{
+        display: grid;
+        /*grid-template-columns: 100px 100px 100px;*/
+        grid-template-rows: 100px 100px;
+        grid-template-columns: repeat(3, 1fr);
+        /*grid: row gap 30px;
+        grid:column gap 12px;*/
+        grid-gap: 30px 12px; 
+    }
+    .grid-item:nth-child(1){
+        background-color: red;
+        /*grid-row-start: 1;
+        grid-row-end: 4;*/
+        grid-row: 1 / 2;
+        grid-column: 2 / -1; 
+    }
+    .grid-item:nth-child(2){
+        grid-row: 1 / span 2;
+    }
+    .grid-item:nth-child(6){
+        grid-column: 1 / span -1;
+    }
+    
+    .grid-conteiner--01{
+        width: 300px;
+        background: #ccc;
+    }
+    .grid-item--01{
+        background: #999;
+        font-size: 2em;
+        font-family: sans-serif;
+        padding: 5px 15px;
+    }
+    .grid-item--01:nth-child(even){
+        background: #999;
+        color: white;
+    }
+    .grid-item--01:nth-child(odd){
+        background: #eee;
+    }
+    .grid-conteiner--01{
+        display: grid;
+        grid-template-rows: 100px 100px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 12px 12px;
+        grid-template-areas: 
+        "img-01 texto texto"
+        "img-01 img-02 img-03"
+        "img-01 img-02 img-03";
+        margin-top: 15px; 
+    }
+    .img-01{
+        grid-area: img-01;
+    }
+    .texto{
+        grid-area: texto;
+    }
+    .img-02{
+        grid-area: img-02;
+    }
+    .img-03{
+        grid-area: img-03;
+    }
+    .grid-conteiner--02{
+        width: 90%;
+        background: rgb(234, 228, 228);
+        margin: 30px auto;
+    }
+    .grid-item--02{
+        background-color: rgb(2, 236, 236);
+        padding: 15px;
+        font-family: sans-serif;
+    }
+    /* Grid */
+    .grid-conteiner--02{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 100px 50px 1fr 50px;
+        grid-gap: 20px;
+        grid-template-areas:
+        "header header header"
+        "nav    nav    aside"
+        "main   main   aside"
+        "main   main   aside"
+        "main   main   aside"
+        "footer footer aside ";
+    }
+    .header{
+       /* grid-column: 1 / -1;*/
+       grid-area: header;        
+    }
+    .nav{
+        /*grid-column: 1 / 3;*/
+        grid-area: nav;
+    }
+    .aside{
+        /*grid-row: 2 / 5;
+        grid-column: 3 / -1;*/
+        grid-area: aside;
+    }
+    .main{
+        /*grid-column: 1 / 3;
+        min-height: 200px;*/
+        grid-area: main;
+    }
+    .footer{
+       /* grid-column: 1 / 3;
+        grid-row: 4 / 5;
+        background: red;*/
+        grid-area: footer;
+    }
+    .grid-conteiner--03{
+        width: 90%;
+        background: rgb(132, 232, 156);
+        margin: 30px auto;
+    }
+    .grid-item--03{
+        background-color: rgb(196, 25, 150);
+        padding: 15px;
+        font-family: sans-serif;
+    }
+    /* Grid */ 
+    .grid-conteiner--03{
+        display: grid;
+        grid-template-rows: [headers-start] 100px [headers-end navs-start] 50px
+         [navs-end mains-start] 1fr [mains-end footers-start] 50px [footers-end];
+        grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr
+         [col2-end col4start] 1fr [col4-end];        
+        grid-gap: 20px;
+    }
+    .headers{
+        grid-column: col1-start / col3-end;
+        grid-row: headers;       
+    }
+    .navs{
+        grid-column: col1-start / col3-end;
+        grid-row: navs;  
+    }
+    .asides{
+        grid-column: col3-start / col3-end;
+        grid-row: mains-start / footers-end;
+    }
+    .mains{
+        min-height: 200px;
+        grid-column: col1-start / col2-end;
+        grid-row: mains; 
+    }
+    .footers{
+        grid-column: col1-start / col3-end;
+        grid-row: footers; 
+    }
+
+</style>
+<body>
+    <h1>Grid Layout</h1>
+    
+    <div class="grid-conteiner">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+    <div class="grid-conteiner--01">
+        <div class="img-01 grid-item--01">1</div>
+        <div class="texto grid-item--01">2</div>
+        <div class="img-02 grid-item--01">3</div>
+        <div class="img-03 grid-item--01">4</div> 
+    </div>
+    <div class="grid-conteiner--02">
+        <header class="header grid-item--02">Header</header>
+        <nav class="nav grid-item--02">Nav</nav>
+        <aside class="aside grid-item--02">Aside</aside>
+        <main class="main grid-item--02">Main</main>
+        <footer class="footer grid-item--02">Footer</footer>
+    </div>
+    <h3>Outra forma de obter o mesmo resultado</h3>
+    <div class="grid-conteiner--03">
+        <header class="headers grid-item--03">Header</header>
+        <nav class="navs grid-item--03">Nav</nav>
+        <aside class="asides grid-item--03">Aside</aside>
+        <main class="mains grid-item--03">Main</main>
+        <footer class="footers grid-item--03">Footer</footer>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    .grid-conteiner--03{
+        width: 90%;
+        background: rgb(132, 232, 156);
+        margin: 30px auto;
+    }
+    .grid-item--03{
+        background-color: rgb(196, 25, 150);
+        padding: 15px;
+        font-family: sans-serif;
+    }
+        
+    .grid-item--3{
+        background: #999;
+        font-size: 2em;
+        font-family: sans-serif;
+        padding: 5px 15px;
+    }
+        /* Grid */ 
+    .grid-conteiner--03{
+        display: grid;
+        grid-template-rows: [headers-start] 100px [headers-end navs-start] 50px
+         [navs-end mains-start] 1fr [mains-end footers-start] 50px [footers-end];
+        grid-template-columns: repeat(3, [col-start] 1fr [col-end]);        
+        grid-gap: 20px;
+    }
+    .headers{
+        grid-column: col-start 1 / col-end 3;
+        grid-row: headers;       
+    }
+    .navs{
+        grid-column: col-start 1 / col-end 3;
+        grid-row: navs;  
+    }
+    .asides{
+        grid-column: col-start 3 / col-end 3;
+        grid-row: mains-start / footers-end;
+    }
+    .mains{
+        min-height: 200px;
+        grid-column: col-start 1 / col-end 2;
+        grid-row: mains; 
+    }
+    .footers{
+        grid-column: col-start 1 / col-end 3;
+        grid-row: footers; 
+     }
+    </style>
+</head>
+<body>
+    
+    <h3>Outra forma de obter o mesmo resultado</h3>
+    <div class="grid-conteiner--03">
+        <header class="headers grid-item--03">Header</header>
+        <nav class="navs grid-item--03">Nav</nav>
+        <aside class="asides grid-item--03">Aside</aside>
+        <main class="mains grid-item--03">Main</main>
+        <footer class="footers grid-item--03">Footer</footer>
+    </div>
+    
+</body>
+</html>

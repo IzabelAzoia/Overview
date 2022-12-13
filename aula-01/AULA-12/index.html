@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <title>Document</title>
+    <style>
+        .grupo-cores{
+            padding: 15px;
+            background: url(imagem/tile.png);
+            counter-reset: contador;
+        }
+        .grupo-cores div{
+            width: 80%;
+            height: 150px;
+            border: 10px solid rgba(0, 0, 0, .5);
+            margin: 20px auto;
+            padding: 15px;
+            counter-increment: contador;
+        }
+        .grupo-cores div::before{
+            content: '[' counter(contador) ']';
+        }
+        .grupo-cores div:nth-child(2){
+            background-color: brown;
+            background-clip: content-box;
+        }
+        .grupo-cores div:nth-child(3){
+            background-color: rgb(50%, 50%, 0%);
+            background-clip: content-box;
+        }
+        .grupo-cores div:nth-child(4){
+            background-color: rgba(50%, 50%, 0%, .5);
+            background-clip: content-box;
+        }
+        .grupo-cores div:nth-child(5){
+            background-color: hsl(120deg, 100%, 20%);
+            background-clip: content-box;
+        }
+        .grupo-cores div:nth-child(6){
+            background-color: hsl(120deg, 100%, 20%, .5);
+            background-clip: content-box;
+        }
+        .grupo-cores div:nth-child(7){
+            background-image: linear-gradient( 180deg, blue, transparent),
+            linear-gradient( to top, red, transparent);
+            background-clip: content-box, border-box;
+        }
+        .grupo-cores div:nth-child(8){
+            background-image: radial-gradient(red, yellow);
+        }
+        .grupo-cores div:nth-child(9){
+            background-image: radial-gradient(circle, yellow, green);
+        }
+        .grupo-cores div:nth-child(10){
+            background-image: radial-gradient(ellipse,yellow 20%, blue, rgba(50, 10, 200, .3),
+            red, green 100%);
+        }
+        .grupo-cores div:nth-child(11){
+            background-image: radial-gradient(closest-side at 20% 90%,
+            red 50%, rgba(50, 10, 200, .3),
+            orange, green 100% );
+        }
+        .grupo-cores div:nth-child(12){
+            background-image: radial-gradient(farthest-side at 20% 90%,
+            red 50%, rgba(50, 10, 200, .3),
+            orange, green 100% );
+        }
+        .grupo-cores div:nth-child(13){
+            background-image: radial-gradient(closest-corner at 20% 90%,
+            red 50%, rgba(50, 10, 200, .3),
+            orange, green 100% );
+        }
+        .grupo-cores div:nth-child(14){
+            background-image: radial-gradient(farthest-corner at 20% 90%,
+            red 50%, rgba(50, 10, 200, .3),
+            orange, green 100% );
+        }
+        .grupo-cores div:nth-child(15){
+            background-image: repeating-linear-gradient(red 0%,
+            green 10%, yellow 22.22%);
+        }
+        .grupo-cores div:nth-child(16){
+            background-image: repeating-radial-gradient(red 0%,
+            green 10%, yellow 22.22%);
+        }
+        .grupo-cores div:nth-child(17){
+            background-image: repeating-radial-gradient(red 0%,
+            green 10%, yellow 22.22%), linear-gradient(green,blue);
+            background-attachment: fixed;
+        }
+        .grupo-cores div:nth-child(18){
+            background-image: radial-gradient(closest-corner at 50% 25%,
+            black, transparent), url(imagem/rwd-images/320_mob.jpg);
+            background-size: cover;
+            background-position: center -50px, center bottom;
+            background-repeat: no-repeat;
+        } 
+    </style>
+</head>
+<body>
+    <h1>Picture</h1>
+    <picture>
+        <source media="(min-widgth: 480px)" sizes="33vw" srcset="imagem/rwd-images/1280.jpg 1280w, 
+        imagem/rwd-images/960.jpg 960w, imagem/rwd-images/480.jpg 480w">        
+        <source sizes="100vw" srcset="imagem/rwd-images/822_mob.jpg 822w, imagem/rwd-images/640_mob.jpg
+        640w, imagem/rwd-images/320_mob.jpg 320w">
+        <img src="imagem/rwd-images/1280.jpg " alt="texto alternativo">  
+    </picture>
+    <h1>RGB-HSL</h1>
+
+    <h2>Backgrounds, Cores e Gradientes</h2>
+    <P>Nomes, Hexadecimais,RGB, RGBa, HSL e HSLa</P>
+    <div class="grupo-cores">
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>        
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>        
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>        
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div>
+        <div class="cores"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam sequi illo molestias veritatis iusto quo nam nesciunt odit libero, in quos iste atque praesentium commodi non veniam ex! Eos.</p></div> 
+
+    </div>
+ 
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>enxugando o codigo</h1>
+    
+    <script>
+        
+        // Pedir jogador 1 digitar um numero 
+        var njog1 = prompt("numero do jogador 1");
+        njog1 = parseInt(njog1);
+        // Pedir jogador 2 digitar outro numero
+         var njog2 = prompt("numero do jogador 2");
+         njog2 = parseInt(njog2);
+        // Se forem iguais, mostrar mensagem 'empate' e encerrar programa 
+        if(njog1 === njog2){
+            alert("Vocês Empataram");
+        } else {        
+        // sortear um numero entre 0 e 1.
+        var nSorteado = parseInt(Math.random() * 2);
+        alert("nSorteado: " + nSorteado);
+         
+        // Se o numero sorteado for 0, ganha quem escolheu o numero menor 
+        if(nSorteado === 0 && njog1 < njog2 || nSorteado === 1 && njog1 > njog2){
+            alert("ganhou o jogador 1");
+        }else {
+            // Se o numero sorteado for 1, ganha quem escolheu o numero maior 
+            alert("Ganhou o jogador 2");
+        }
+        
+        }
+        </script>
+    
+</body>
+</html>
