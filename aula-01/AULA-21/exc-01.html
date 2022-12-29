@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Strings</h1>
+    <h2>Literais <br> var meuTexto ="Olá Mundo!";</h2>
+    <h2>Objetos <br> var meuTexto = new String("Olá Mundo!");</h2>
+    <h2>Possui métodos e propriedades: length, <br>
+    replace(), indexOf(). lastIndexOf(), slice(), <br>
+    substring(), split(), toLowerCase(), <br>
+    toUpperCase(), valueOf().</h2>
+    <h1>Problema</h1>
+    <p>Criae uma função que recebe o nome completo e retorna este formato seguindo o exemplo: <br>
+    "Maria Izabel Catro Azoia" será transformado em: "Azoia, Maria Izabel Castro".</p>
+
+    <script>
+        var nome = "Maria Izabel Castro Azoia";
+
+        var nomeFormatado = formatarNome(nnome);
+        
+
+        function formarNome(nome){
+            var posicaoUltimoEspaco = nome.lastIndexOf(' ');
+            if(posicaoUltimoEspaco <= 0){
+                return nome;
+            }
+            var ultimoNome = nome.slice(posicaoUltimoEspaco + 1);
+            console.log('ultimoNome', ultimoNome);
+
+            var primeiroNome = nome.slice(0, posicaoUltimoEspaco);
+            console.log('posicaoULtimoEspaco', posicaoUltimoEspaco);
+
+            return ultimoNome +',' + primeiroNome;
+        }
+        console.log(nomeFormatado);
+    </script>
+</body>
+</html>

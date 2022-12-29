@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funções que recebem parametros</h1>
+
+    <h2>São uteis para reaproveitar ainda mais seus codigos.</h2>
+    <h2>Problema</h2>
+    <p>Pedir parao usuario digitar dois numeros que representam os lados de um retangulo <br>
+    assim que a pagina é carregada. Mostrar na tela a área total quando clicar num botão. </p>
+
+        <button onclick="mostrarArea(largura, altura)">mostrar area</button>
+    <script>
+        var largura = prompt('digite a largura');
+        largura = parseFloat(largura);
+
+        var altura = prompt('digite altura');
+        altura = parseFloat(altura)
+
+        function mostrarArea(l, a){
+            alert('area total: ' + ( l * a));
+        }
+    </script>
+    
+</body>
+</html>

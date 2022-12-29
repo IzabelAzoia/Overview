@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM</h1>
+    <h1>Value: Propriedade que recupera e insere novo valor em um campo de formulario</h1>
+    <h2>Dica: Tanto as propriedades. value, .textContent e . innerHTML servem para definir um novo valor ou recuperar o valor atual.</h2>
+    <h1>Problema</h1>
+    <p>Temos duas variáveis chamadas nome e sobrenome com valores definidos. <br> 
+    Precisamos mostrar estas variaveis convatenadas nom input = "text" e deixar <br>
+    este input desabilitado.</p>
+    <input type="text" id="txtNome" value="digite">
+
+    <script>
+        var $txt = document.querySelector('#txtNome');
+        var nome = "Daniel ";
+        var sobrenome = "Morales";
+        
+        document.querySelector('#txtNome').value = nome + sobrenome;
+
+        document.querySelector('#txtNome').disabled = true;
+    </script>
+</body>
+</html>

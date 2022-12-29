@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <h2>Length, every(), filter(), forEach(), indexOf(), lastIndexOf(), <br>
+    map(), some(), cancat(), join(), pop(), push(), reduce(), reduceRight(), <br>
+    reverse(). shift(), slice(), splice(), unshift(), toString().</h2>
+    <h1>Desafio</h1>
+    <h2>Selecione todos os parágrafos da páginae se tiver mais de 10 palavras mostrar sd primeiras 10 seguido de reticencias.</h2>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, voluptate voluptatum mollitia eligendi, esse quisquam facilis facere ipsum aliquam omnis enim et quasi sapiente obcaecati dolorem laborum quos labore saepe. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem beatae, alias minus asperiores quia accusamus reprehenderit dignissimos ut suscipit eligendi dicta dolor hic nulla nesciunt est rerum sed, laborum cupiditate?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus natus facere quod distinctio? Optio aperiam repellendus suscipit quasi voluptatem sit, reiciendis quo possimus nihil! Exercitationem, ullam cumque? Modi, quae vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi quod ducimus! Corporis aliquam id voluptatibus nobis minus. Tempore aspernatur modi explicabo ea veritatis? Eligendi debitis ea quis illum excepturi!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa consequatur impedit, ad id at amet optio, libero ratione laudantium repellendus iste nemo est voluptatibus, nostrum voluptate vitae. Optio, sint rem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo provident aut magni quos sed facilis corrupti, veritatis id at quidem quas commodi rerum eum repudiandae nulla nisi inventore enim aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nisi ullam facilis autem quasi dicta facere a repellat! Repudiandae eos delectus eius voluptas porro neque earum necessitatibus, veniam facilis accusantium!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas rem sed enim neque quis ratione, minus blanditiis adipisci vel aperiam tempora maxime officia? Alias dolorem mollitia non eos facere!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum nisi debitis eaque alias in, accusamus asperiores repellendus placeat ducimus, aperiam molestiae vitae minus, consequatur provident. Voluptatum esse obcaecati labore laboriosam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, voluptate voluptatum mollitia eligendi, esse quisquam facilis facere ipsum aliquam omnis enim et quasi sapiente obcaecati dolorem laborum quos labore saepe. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem beatae, alias minus asperiores quia accusamus reprehenderit dignissimos ut suscipit eligendi dicta dolor hic nulla nesciunt est rerum sed, laborum cupiditate?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus natus facere quod distinctio? Optio aperiam repellendus suscipit quasi voluptatem sit, reiciendis quo possimus nihil! Exercitationem, ullam cumque? Modi, quae vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas modi quod ducimus! Corporis aliquam id voluptatibus nobis minus. Tempore aspernatur modi explicabo ea veritatis? Eligendi debitis ea quis illum excepturi!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa consequatur impedit, ad id at amet optio, libero ratione laudantium repellendus iste nemo est voluptatibus, nostrum voluptate vitae. Optio, sint rem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo provident aut magni quos sed facilis corrupti, veritatis id at quidem quas commodi rerum eum repudiandae nulla nisi inventore enim aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nisi ullam facilis autem quasi dicta facere a repellat! Repudiandae eos delectus eius voluptas porro neque earum necessitatibus, veniam facilis accusantium!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas rem sed enim neque quis ratione, minus blanditiis adipisci vel aperiam tempora maxime officia? Alias dolorem mollitia non eos facere!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum nisi debitis eaque alias in, accusamus asperiores repellendus placeat ducimus, aperiam molestiae vitae minus, consequatur provident. Voluptatum esse obcaecati labore laboriosam!</p>
+    </div>
+
+    <script>
+        var paragrafos = document.querySelectorAll('p');
+        for (var i = 0; i < paragrafos.length; i++){
+            paragrafos[i].innerHTML = formataParagrafo(paragrafos[i].innerHTML);
+
+        }
+
+        function formataParagrafo(texto){
+            var arr = texto.split(' ');
+            console.log(arr);
+
+            if(arr.length > 10){
+                return arr.slice(0, 10).join(' ') + '...';
+            }
+            return texto;
+        }
+    </script>
+</body>
+</html>

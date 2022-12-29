@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercicio Proposto</h1>
+    <p>Para este exercicio aplique a lógica necessário para mostrar os <br> 
+    anos que são realmente bissexto, respeitando a regra: Os anos <br>
+    bissextos são múltiplos de 4, não múltiplo de 100(1900 não é bissexto) <br>
+    e multiplos de 400 (2000 é bissexto).</p>
+    <script>
+        var ano = 1004;
+        while(ano <=2022){
+            if( !(ano % 100 === 0) || (ano % 400 === 0)){
+                document.write(ano + '<br>');
+            }else {
+                document.write(ano + 'não é bissexto <br>')
+            }
+            ano += 4;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Problema</h1>
+    <p>Num textarea com um numero maximo de caracteres permitidos, mostrar numa span o numero de <br>
+    caracteres restantes e indicar pro usuario quando restam apenas 10 caracteres.</p>
+
+    <div class="container">
+        <textarea id="msg" cols="50" rows="10" maxlength="100"></textarea>
+        <div id="restaConteiner" style="display: none;">Restam <span id="resta" ></span> caracteres </div>
+       
+    </div>
+
+    <script>
+        (function(){
+            'user strict';
+            
+            var $txtMsg = document.getElementById('msg');
+            var $restaConteiner = document.getElementById('restaConteiner');
+            var $resta = document.getElementById('resta');
+            var maxima = $txtMsg.maxLength;
+
+            function mostrarConteinerResta(){
+                $restaConteiner.style.display = 'block';
+            }                        
+            mostrarConteinerResta();
+            mostrarCaracteresRestantes(maxima);
+            $txtMsg.addEventListener('input', checkLength);
+ 
+            function checkLength(e){
+                var numeroLetrasDigitadas = this.value.length;
+                var caracteresRestantes = parseInt(maxima) - 
+                parseInt(numeroLetrasDigitadas);
+                mostrarCaracteresRestantes(caracteresRestantes); 
+            }
+
+            function mostrarCaracteresRestantes(n){
+                $resta.textContent = n;
+            }
+        
+        })()
+    </script>
+</body>
+</html>

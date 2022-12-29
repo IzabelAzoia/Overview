@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Date</h1>
+    <h2>getDay(), getFullYear(), getHours(), getMilliseconds(), getMinutes(), <br>
+    getMounth(), getSeconds(), getTime(), setDate(), setDay() e todos os set acima.</h2>
+    <h1>Problema</h1>
+    <h2>Fazer uma página que mostra quantos dias faltam para o seu proximo <br>
+    aniversario e mostrar mensagem de parabéns.</h2>
+
+    <script>
+        (function(){
+            var dataAtual = new Date();
+            dataAtual.setHours(0);
+            dataAtual.setMinutes(0);
+            dataAtual.setSeconds(0);
+            dataAtual.setMilliseconds(0);
+            var anoAtual = dataAtual.getFullYear();
+            
+            var dataNiver = new Date(anoAtual, 1, 10);
+
+            var dataAtualTS = dataAtual.getTime();
+            var dataNiverTS = dataNiver.getTime();
+            if(dataNiverTS === dataAtualTS){
+                alert('Parabéns pelo seu aniversario')
+                return;
+            }
+
+            if(dataNiverTS < dataAtualTS){
+                dataNiver.setFullYear(++anoAtual);
+                dataNiverTS = dataNiver.getTime();
+            }
+
+            const UM_DIA_TS = 24 * 60 * 60 * 1000;
+            var deferenca = dataNiverTS - dataAtualTS;
+            console.log(diferenca / UM_DIA_TS)
+        })()
+    </script>
+</body>
+</html>

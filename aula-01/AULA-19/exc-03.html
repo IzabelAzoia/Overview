@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM</h1>
+    <h1>Objeto document</h1>
+    <h2>Problema</h2>
+    <p>Mostrar na tela (div com um #msg) uma mensagem <br>
+    de boas-vindas, ex. Bem vinda Izabel! O nome do usuario <br>
+    pose ser uma variavel cujo valor fou digitado pelo prompt <br>
+    () e deve estar em negrito.</p>
+    <h1>innerHTML: Inserir código HTML no DOM reflete na visualização da página</h1>
+    <div>
+        <ul>
+            <li>getElementByld</li>
+            <li>getElementsByTagName</li>
+            <li>getElementsByCassName</li>            
+            <li>querySelector</li>
+            <li>querySeletorAll</li>
+        </ul>
+    </div>
+    <div id="msg"></div>
+    <script>
+        (function(){
+            var nome = prompt('qual seu nome');
+            document.querySelector('#msg').innerHTML = 
+            "Bem-Vinda, <b> " + nome + "</b>";
+        })()
+    </script>
+</body>
+</html>

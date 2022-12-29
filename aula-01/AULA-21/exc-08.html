@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 1000px rgba(0, 0, 0, .8);
+            display: none;
+
+        }
+        .banner__close{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>intervalos(temporizadores)</h1>
+    <h2>Criar e remover temporizadores <br>
+    setTimeout(fn, ms), <br>
+    setInterval(fn, ms), <br> clearTimetout(id), <br> clearInterval(id).</h2>
+    <h2>Não são nativos da ECMAScript <br> Em outras palavras, esão presents <br>
+    nos browsers"pendurados em window. Não estão disponiveis no nodejs" </h2>
+    <h1>problema</h1>
+    <h2>O cliente pediu para fazer um po-up bem irritante que Pula na interface <br>
+     do usuario depois de 5 segundos. Este mesmo pop-up deve ser fechado automaticamente <br>
+     apos 5 segundos. (mesmo que o usuario ainda não tenha lido. Lembre-se, a idéis é <br>
+     que seja bem irritante).</h2>
+
+     <div class="banner">
+        <h2>Banner Irritante</h2>
+        <button class="banner__close">X</button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cumque error consequuntur dignissimos deleniti dicta nam eveniet magnam, explicabo amet reiciendis ullam eos aspernatur possimus aperiam quasi architecto! Aliquam, iste?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias dignissimos eveniet voluptate sit sunt, deleniti nihil natus commodi enim facilis! Perspiciatis ipsum amet vel quis tenetur ex vitae repudiandae et!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sapiente fugit eos blanditiis porro nam molestiae perferendis. Cumque, asperiores? Sunt rem vitae voluptas nesciunt! Neque aut autem voluptatem quasi cupiditate?</p>
+
+     </div>
+
+    <script>
+        (function(){
+            var $banner = document.querySelector('.banner');
+            var $bannerBtn = document.querySelector('.banner__close');
+
+            $bannerBtn.addEventListerner('click', escondeBanner);
+            var intervaloEsconde = null
+            function mostraBanner(){
+                $banner.style.display = 'block';
+                intervaloEsconde = setTimeout(esconeBanner, 5000);
+
+            }
+            function escondeBanner(){
+                $bannerBtn.removeEventListener('click',escondeBanner);
+                $banner.parentNode.removeChild($banner);
+
+                clearTimeout(intervaloEsconde);
+            }
+
+            setTimeout(mostraBanner, 1000);
+            setTimeout(escondeBanner, 2000);
+
+
+        })()
+    </script>
+</body>
+</html>

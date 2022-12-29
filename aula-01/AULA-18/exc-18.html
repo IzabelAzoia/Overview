@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Problema</h1>
+    <h2>Mostrar na tela dados de produto, contendo quantidade em estoque e preço. Estes dados estarao agrupados em um array de objetos.</h2>
+    <h1>Array de Objetos: Conjunto de dados ({}) agrupados <br>
+    dentro de um array([])</h1>
+    <div id="output"></div>
+    
+</body>
+<script>
+    var produtos = [
+        {"nome": "caneta", "preco": 2},
+        {"nome": "lapis", "preco": 1.2},
+        {"nome": "borracha", "preco": 0.5}
+    ];
+
+    var msg = "";
+
+    for(var i = 0; i < produtos.length; i++){
+        console.log(produtos[i].preco);
+
+        msg += "<h2>Produto: "+ produtos[i].nome + "</h2>",
+        msg += "<p> preco: R$ "+ produtos[i].preco + "</p>"
+    }
+
+    document.querySelector('#output').innerHTML = msg;
+</script>
+</html>

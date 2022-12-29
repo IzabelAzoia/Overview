@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM</h1>
+    <h2>Problema</h2>
+    <p>Mostrar na tela (div com um #msg) uma mensagem <br>
+    de boas-vindas, ex. Bem vinda Izabel! O nome do usuario <br>
+    pose ser uma variavel cujo valor foi digitado num input <br>
+    () e deve estar em negrito.</p>
+
+    <h1>Value: Propriedade que recupera o valor de um campo de formulario</h1>
+    <input type="text" id="txtNome" value="digite seu nome"> 
+
+    <button onclick="escreve()">enviar</button>
+    <div id="msg"></div>
+    <script>
+        var txtNome2 = document.querySelector('#txtNome');
+        function escreve(){
+            var nome = txtNome2.value;
+            document.querySelector('#msg').innerHTML = 
+            "Bem-Vinda, <b> " + nome + "</b>";
+        }
+    </script>
+    
+</body>
+</html>

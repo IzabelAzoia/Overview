@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .destaque{
+            padding: 15px;
+            display: inline-block;
+            background: magenta
+
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Desafio</h1>
+    <h2>Selecionar todos os paragrafos da pagina e adicionar uma classe de destaque no paragrafo que contem a palavra Reiciendis</h2>
+    
+    <div> 
+        <p>Lorem ipsum Reiciendis dolor sit amet consectetur adipisicing elit. Labore quas rem sed enim neque quis ratione, minus blanditiis adipisci vel aperiam tempora maxime officia? Alias dolorem mollitia non eos facere!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum nisi debitis eaque alias in, accusamus asperiores repellendus placeat ducimus, aperiam molestiae vitae minus, consequatur provident. Voluptatum esse obcaecati labore laboriosam!</p> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas rem sed enim neque quis ratione, minus blanditiis adipisci vel aperiam tempora maxime officia? Alias dolorem mollitia non eos facere!</p>
+        <p>Lorem ipsum, Reiciendis dolor sit amet consectetur adipisicing elit. Cum nisi debitis eaque alias in, accusamus asperiores repellendus placeat ducimus, aperiam molestiae vitae minus, consequatur provident. Voluptatum esse obcaecati labore laboriosam!</p>
+    </div>
+    
+    <script>
+        var paragrafos = document.querySelectorAll('p');
+        for (var i = 0; i < paragrafos.length; i++){
+           var temReic = paragrafos[i].textContent.indexOf('Reiciendis')
+           >= 0;
+        paragrafos[i].className = temReic ? 'destaque' : '';
+
+        }
+        function formataParagrafo(texto){
+            var arr = texto.split(' ');
+            console.log(arr);
+
+            if(arr.length > 10){
+                return arr.slice(0, 10).join(' ') + '...';
+            }
+            return texto;
+        }
+    </script>
+</body>
+</html>

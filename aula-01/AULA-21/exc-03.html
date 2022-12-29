@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="beluga.js"></script>
+    <script>
+    (function(){
+        window.addEventListener('load', init);
+        
+        function init(){
+            var n = sortear (5) + 1;
+            document.querySelector('body').style.background = "url(imagems/imagems"+ n +".jpg)";
+        }
+    })()
+</script>
+</head>
+<body>
+    <h1>Number</h1>
+    <h2>Literais <br> var meuNum = 123;</h2>
+    <h2>Objeto <br> var meuNum = newNumber("123")</h2>
+    <h2>Possui métodos e propriedades:MAX_VALUE, MIN_VALUE, <br>
+    toFexed(), toPrecision(), toString() e toExponential().</h2>
+    <h1>Math</h1>
+    <h2>Possui métodos que nos auxiliam ao trabalhar com valores numéricos. <br>
+    Alguns deles: min(), max(), round(), flloor(), ceil(), pow(), sqrt(), e random().</h2>
+    <h1>Desafio</h1>
+    <p>Desenvolva uma página que mude a imagem de fundo sempre que a página é <br>
+     recarregada(randômico). Será que é uma boa utilizarmos a função recém -criada?</p>
+</body>
+</html>

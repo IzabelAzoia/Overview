@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Desafio</h1>
+    <p>crie uma função que retorne o indice de massa corporal (imc).<br>
+    Crie outra função que receba este indeice e retorne uma string informando sua classificação.</p>
+    <div id="output"></div>
+</body>
+<script>
+    (function(){
+        function calcularIMC(peso, altura, callback){
+            var imc = peso / (altura * altura);
+
+            if(callback && typeof callback === 'function'){
+                return callback(imc);
+            }
+            console.log('nao passou callback')
+            return imc;
+        }
+        function classificaIMC(imc){
+            if (imc <= 16.9){
+                return 'muito abaixo do peso';
+            } else if (imc <= 18.4){
+                return 'abaixo do peso';               
+            } else if(imc <= 24.9){
+                return 'normal';
+            } else if(imc <= 29.9){
+                return 'acima do peso';                
+            } else if(imc <= 34.9){
+                return 'obesidae 1';
+            } else if(imc <= 40){
+                return 'obesidae 2';
+            } else {
+                return 'obesidae 3';
+            }
+        }
+
+        var peso = 65;
+        var altura = 1.75;
+
+        var imc = calcularIMC(peso, altura, classificaIMC);         
+
+        console.log('classificacao IMC: ', classificacao);
+    })()
+    
+    document.querySelector('#output').innerHTML = msg;
+
+</script>
+</html>

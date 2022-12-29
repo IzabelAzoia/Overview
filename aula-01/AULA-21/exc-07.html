@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Desafio</h1>
+    <h2>Crie uma função que retorne uma data formatada com padrão brasileiro:DD/MM/AAAA</h2>
+
+    <script>
+        (function(){
+            var data = new Date();
+            data.setDate(2);
+            data.setMonth(2);
+
+            function formatDate(data){
+                var dia = data.getDate()< 10 ? '0' + data.getDate() : data.getDate();
+
+                var mes = datta.getMonth() + 1;
+                mes = mes < 10 ? '0' + mes : mes;
+                return dia + '/' + mes + '/' + data.getFullYear();
+            }
+            console.log(faormatDate(data));
+        })()
+    </script>
+</body>
+</html>

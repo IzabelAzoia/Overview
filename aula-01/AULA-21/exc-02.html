@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        (function(){
+            window.addEventListener('load', init);
+
+            function init(){
+                var $paragrafos = document.querySelectorAll('p');
+
+                var x = 0;
+                while($paragrafos[x]){
+                    $paragrafos[x].innerHTML =
+                    formatarTexto($paragrafos[x]);
+                    x++;
+                }
+            }
+
+            function formatarTexto(texto){
+                var numeroMaximoCaracteres = 200;
+                if(texto.length <= numeroMaximoCaracteres)
+                return texto;
+
+                var subTexto = texto.slice(0, numeroMaximoCaracteres);
+                return subTexto + '...';
+            }
+        })()
+    </script>
+</head>
+<body>
+    <h1>Problema</h1>
+    <p>Selecionar todos os parágrafos de uma página e, se o texto tiver mais <br>
+     do que duzentos caracteres, mostrar somente os duzentos primeiros seguidos <br>
+     de reticencias. </p>
+     <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At facere dolorum inventore ab et commodi dicta voluptatem cumque! Asperiores iure et reiciendis? Rem porro eius accusantium molestias, sunt adipisci ipsum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo quam ipsa repudiandae assumenda earum provident, ipsum error, suscipit amet dolores aliquam dolor quis aperiam maxime, accusamus repellat libero repellendus nesciunt?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam dolorem ex voluptatem hic, ipsum exercitationem repudiandae reprehenderit id animi quam quia similique tenetur placeat cum assumenda nostrum mollitia officia soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab veniam commodi explicabo ad eveniet dolor illo tempore, eius, obcaecati quisquam quae numquam dolore doloribus voluptatum. Tempora dolore eum facere labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sit libero, velit labore hic eum laboriosam fugiat illo tempore commodi eaque aspernatur enim maxime necessitatibus at, officia laudantium, mollitia saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aliquid soluta in saepe sapiente sunt commodi ipsam nisi aut repudiandae aspernatur, incidunt esse architecto magni consectetur nobis dolor perspiciatis blanditiis.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem illum nam placeat perspiciatis praesentium quo accusamus esse tempora. Deleniti veritatis ipsum rem dicta quae accusamus et, temporibus dolorem provident similique?</p>
+     </div>
+</body>
+</html>

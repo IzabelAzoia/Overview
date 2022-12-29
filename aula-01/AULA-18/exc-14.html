@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conjunto de dados</h1>
+    <h1>Arrays</h1>
+    <h2>Conjunto de dados agrupados entre []</h2>
+    <h2>Problema</h2>
+    <p>Mostrar na tela todos os produtos disponiveis para compra. <br>
+    Os nomes dos preodutos estão agrupados em um Array.</p>
+
+    <div id="output"></div>
+    <script>
+        var produtos = new Array('caneta', 'lapis', 'tesoura',
+        'borracha', 'caderno', 'livro');
+
+        produtos.push('compasso', 'cartolina')
+        var output = document.querySelector('#output')
+
+        var msg = '';
+        for (var i = 0; i < produtos.length; i++){
+            msg += 'produto ' + (i + 1) + ': ' + produtos[i] + '<br>';
+        }
+        
+        output.innerHTML = msg;
+
+    </script>
+    
+</body>
+</html>

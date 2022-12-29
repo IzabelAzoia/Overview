@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Problema</h1>
+    <p>Permitir o envio de um formulario somente apos o usuario aceitar os <br>
+     termos de contrato (checkbox). Para este exemplo, vamos habilitar ou  <br>
+     desabilitar o baotao dependendo do checkbox.</p>
+
+     <div class="container">
+        <form action="#">
+            <textarea cols="50" rows="10">Contrato de serviços prestados
+            </textarea>
+            <br>
+            <label >                 
+                <input type="checkbox" id="chk" checked>Li e aceito os termos desse contrato
+            </label>
+            <br>
+            <input type="submit" value="Continuar" id="btn">
+        </form>
+
+     </div>
+
+     <script>
+        (function(){
+            'use strict';
+            var $btn = document.getElementById('btn');
+            var $chk = document.getElementById('chk');
+            toggleBtn();
+
+            $chk.addEventListener('change', function(){
+                toggleBtn();
+            });
+            function toggleBtn(){
+                $btn.disabled = !$chk.checked;
+            }
+        })()
+     </script>
+</body>
+</html>

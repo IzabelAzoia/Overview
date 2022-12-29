@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Criar um array com tres objetos. <br> 
+    Cada objeto devera ter duas propriedades (nome e email)</h2>
+    <div id="output"></div>
+</body>
+<script>
+    var user1 = new Object();
+    user1.nome = 'Izabel';
+    user1.email = 'izabel@server.com';
+
+    var user2 = new Object();
+    user2.nome = 'Eduardo';
+    user2.email = 'eduardo@server.com';
+
+    var user3 = new Object();
+    user3.nome = 'Enrique';
+    user3.email = 'enrique@server.com';
+
+    var users = new Array(user1, user2, user3);
+    console.log(users);
+
+    var msg = '';
+    var x = 0;
+    while(users[x]){
+        console.log(users[x].nome);
+        msg += users[x].nome + ' - ' + users[x].email +'<br>';
+        x++;
+    }
+    
+    document.querySelector('#output').innerHTML = msg;
+
+</script>
+</html>

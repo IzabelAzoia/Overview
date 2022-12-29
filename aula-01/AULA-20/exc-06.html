@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .done{
+            text-decoration: line-through;
+            color: rgb(42, 165, 73);
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Problema</h1>
+    <p>Fazer uma pequena lista de tarefas onde o usuario pode acrescentar um novo <br> 
+    item (li) na lista (ul) atraves de um input e um botao  Esta lista deve estar <br>
+    preenchida previamente com tres itens quaisquer. Acrescentar eventos de click em <br>
+    cada li para marcar como feito.
+    </p>
+    <h2>Ao utilizar o innerHTML removemos todos os eventos inseridos nos itens de lista</h2>
+    <h2>Para resolver, devemos criar o DOM dinamicamente com os metodos createElement() e appendChild()</h2>
+    <h2>Mas ainda temos um problema: execesso de listeners. Para resolve: delegação de eventos.</h2>
+
+    <div class="container">
+
+        <input type="text" id="txtTask">
+         
+        <button id="btn">Cadastrar tarefas</button>
+        <ul>
+            <li>Estudar JavaScript - DOM</li>
+            <li>Estudar eventos em JavaScript</li>
+            <li>Assistir séries</li>
+        </ul>
+
+    </div>
+
+    <script>
+        (function(){
+            'use strict'
+
+            var $ul = document.querySelector('ul');
+            var $lis = $ul.querySelectorAll('li')
+            var $txtTask = document.querySelector('#txtTask');
+            var $btn = document.querySelector('#btn');
+
+            $btn.addEventListener('click', addTask);
+            $txtTask.addEventListener('keyup', function(e){
+                if(e.keyCode ===13) {
+                    addTask();
+                }
+            });
+ 
+            $ul.addEventListener('click', function(e){
+                if(e.target.nodeName === 'LI'){
+                    toggleDone(e.target)
+                }
+            })
+
+            function toggleDone(li){
+                li.classList.toggle('done')
+            }
+            
+            function addTask(){                                
+                var li = document.createElement('li');
+                var text = document.createTextNode($txtTask.value);
+
+                li.appendChild(text);
+
+                $ul.appendChild(li);
+
+                $txtTask.value = '';
+                $txtTask.focus();  
+            } 
+
+
+        })()
+    </script>
+</body>
+</html>

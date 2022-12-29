@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="js menu=oponed">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <h1>DOM</h1>
+    <h2>acessando atributos no HTML</h2>
+    <h2>algumas propriedades posem ser acessadas usando o DOM</h2>
+    <h2>$elemento.id <br> $elemento.maxLength</h2>
+    <h2>Outras só com o DOM2 <br> $elemento.getAttribute('readonly')</h2>
+    <h2>Modificando atributos no HTML <br>  DOM </h2>
+    <h2>$elemento.disable = false; <br> $elemento.checked = true; <br>
+    $elemento.className = 'myClass';  <br> $elemento.id = 'myId';</h2>
+    <h2>DOM2 <br> $elemento.setAttributr('disable', false); <br> 
+    $elemento.setAttribute('checket', false); <br> $elemento.setAttribute('id','myId') <br>
+    $elemento.setAttribute('class','myClass')</h2>
+    <h1>Problema</h1>
+    <p>Deixar o nosso hambúrguer menu mais acessível usando atributo ARIA</p>
+    <script id="__bs_script__"></script>
+    <script async src="/browser-sync/broser-syncclient.js?v=2.18.13"></script>
+    
+    <nav class="header-nav">
+        <div class="container">
+            <a href="exc-08.html" class="header-nav__logo">
+                <img src="imagens/imagens/logo.svg" alt="Logotipo Izabel Azoia">
+            </a>
+            <button aria-controls="mainMenu" class="header-nav__hamburgger" type="button" aria-expanded="false">
+                <div class="header-nav__hamburggerParties">
+                    <span class="sr-only">Menu</span>
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+
+                    <symbol id="icon-menu" viewBox="0 0 32 32">
+                        <title>Menu</title>
+                        <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
+                    </symbol>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><title>Menu</title><path style="fill: wheat;" d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path></svg>
+
+                </div>
+            </button>
+            <ul class="header-nav__menu" id="mainMenu">
+                <li><a href="portifolio.html">Portifolio</a></li>
+                <li><a href="sobre.html">Sobre mim</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <div class="jumbotron header-animado">
+        <div class="container">
+            <p class="header-animado__title">Olá tudo bem!</p>
+            <h1 class="header-animado__subtitle">Izabel Azoia, Estudante, front-ender e apreciadora de Waffle!</h1>
+        </div>
+        <div class="header-animado__ilustra">
+            <div class="nuvens"></div>
+            <div class="casas"></div>
+            <div class="rua"></div>
+            <div class="carrosCima"></div>
+            <div class="carrosBaixo"></div>
+            <div></div>
+        </div>
+    </div>
+    <footer class="rodape">
+        <div class="container">
+            <p class="text-muted text-right">Social:</p>
+            <ul class="list-inline pull-right">
+                <li>
+                    <a href="#" class="btn-social btn-outlin">
+                        <svg xmlns="http://www.w3org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><title>facebllk</title><path class="color-icon" d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
+                    </a>
+                </li>
+                <li><a href="#" class="btn-social btn-outline">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><title>Twitter</title><path class="color-icon" d="M32 7.075a12.941 12.941 0 0 1-3.769 1.031 6.601 6.601 0 0 0 2.887-3.631 13.21 13.21 0 0 1-4.169 1.594A6.565 6.565 0 0 0 22.155 4a6.563 6.563 0 0 0-6.563 6.563c0 .512.056 1.012.169 1.494A18.635 18.635 0 01 2.23 5.195a6.56 6.56 0 0 0-.887 3.3 6.557 6.557 0 0 0 2.919 5.463 6.565 6.565 0 0 1-2.975-.819v.081a6.565 6.565 0 0 0 5.269 6.437 6.574 6.574 0 0 1-2.968.112 6.588 6.588 0 0 0 6.131 4.563 13.17 13.17 0 0 1-9.725 2.719 18.568 18.568 0 0 0 10.069 2.95c12.075 0 18.681-10.006 18.681-18.681 0-.287-.006-.569-.019-.85A13.216 13.216 0 0 0 32 7.076z"></path></svg>
+                </a></li>
+                <li><a href="#" class="btn-social btn-outline">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><title>linkedin2</title><path class="color-icon" d="M12 12h5.535v2.837h.079c.77-1.381 2.655-2.837 5.464-2.837C28.92 12 30 15.637 30 20.367V30h-5.769v-8.54c0-2.037-.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509V30H12V12zM2 12h6v19H2V12zm6-5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path></svg>
+                </a></li>
+                <li><a href="#" class="btn-social btn-outline"></a></li>
+            </ul>
+
+        </div>
+
+    </footer>
+    <script src="css/javascript/menu.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Desafio</h1>
+    <h2>MostrarRelógio Criar uma função que retorne a hora atual no formato <br>
+    hh:mm:ss. Mostre esse texto numa div . Agora execute essa função a cada 1 segundo.</h2>
+
+    <div class="relogio">
+
+    </div>
+    <script>
+        (function(){
+           var $relogio = document.querySelector('relogio');
+           
+           function horas(){
+            var data = new Date();
+            var h = formata(data.getHours());
+            var m = formata(data.getHours());
+            var s = formata(data.getHours());
+
+            return h + ":" + m + ":" + s;
+
+           }
+
+           function formata(t) {
+            return t < 10 ? "0" + t : t;
+           }
+
+           function mostraRelogio(atual){
+            $relogio.textContent = atual;
+           }
+           mostraRelogio(horas());
+           setInterval(function(){
+            mostraRelogio(horas());
+           },1000)
+        })()
+    </script>
+</body>
+</html>

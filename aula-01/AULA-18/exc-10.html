@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funções que retornam valores</h1>
+    <h2>Funções são uteis para que o desenvolvedor tenha autonomia para <br>
+     decidir o que deseja fazer com o valor retornado</h2>
+
+     
+    <h2>Problema</h2>
+    <p>Pedir parao usuario digitar dois numeros que representam os lados de um retangulo <br>
+    assim que a pagina é carregada. Mostrar na tela a área total de duas formas distintas: Num alert ou na div#output (dependendo do botao clicado). Esse codigo não precisa ser executado quando a pagina for aberta. </p>
+
+        <button onclick="mostrarAreaAlert()">mostrar area num alert</button>
+        <button onclick="mostrarAreaOutput()">mostrar area num output</button>
+        <div id="output"></div>
+    <script>
+        function mostrarAreaAlert(){            
+            var largura = prompt('digite a largura');
+            largura = parseFloat(largura);
+
+            var altura = prompt('digite altura');
+            altura = parseFloat(altura)
+            var area = calcularArea(largura, altura);
+            alert('a area total é: ' + area);
+        }
+
+        function mostrarAreaOutput(){
+            var largura = prompt('digite a largura');
+            largura = parseFloat(largura);
+
+            var altura = prompt('digite altura');
+            altura = parseFloat(altura)
+            var area = calcularArea(largura, altura);
+            document.querySelector('#output').innerHTML = 'area total é: ' + area; 
+        }
+
+        function calcularArea(l, a){
+            return  l * a;
+        }
+    </script>
+    
+</body>
+</html>

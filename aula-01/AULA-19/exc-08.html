@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   
+   <link  href="css/bootstrap.css" rel="stylesheet"> 
+   <link  href="css/bootstrap-theme.css" rel="stylesheet">
+
+   <script src="excc.js"></script>
+</head>
+<body>
+   <div class="container">
+      <h1>DOM</h1>
+      <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ipsam, facere atque ullam obcaecati placeat possimus non reprehenderit explicabo officiis similique perferendis, expedita exercitationem! Voluptas repellendus libero doloribus dolorem modi.</P>
+      <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga cum, nesciunt accusamus ex cumque vel. Commodi excepturi exercitationem eveniet assumenda, laborum eum veritatis eius eligendi quam possimus libero nesciunt? Labore.</P>
+      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ratione dolorum. Assumenda mollitia atque sit sunt? Fuga natus veritatis cumque, voluptatibus beatae numquam ex, aliquid amet, quia obcaecati veniam doloribus.</P>
+      <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus soluta neque obcaecati, commodi in cum voluptates esse, ut totam eos illum beatae molestiae! Ratione eveniet quasi cupiditate dignissimos ex incidunt.</P>
+      <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas voluptas porro aliquid exercitationem minima distinctio vitae eum temporibus perferendis sapiente tempore, earum dicta ex delectus unde doloremque error ipsa suscipit?</P>
+      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint praesentium laudantium nisi, esse exercitationem ratione? Dolorum suscipit doloribus, enim id dignissimos, ipsa quidem sed nulla quod, eligendi dicta itaque quas.</P>
+      <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti ipsum quas iste earum architecto iure sit nihil? Consectetur provident, esse nam aut mollitia eius doloremque repellendus unde necessitatibus praesentium laudantium!</P>
+      <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat alias voluptates eaque natus iure officia expedita aperiam ratione! Deleniti cupiditate expedita eius laboriosam labore autem quam assumenda eveniet minus aspernatur.</P>
+      <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima ullam laboriosam delectus repellat eligendi maxime dolore, minus non, consequatur accusamus consectetur commodi nostrum totam deserunt illo ipsam culpa? Sit, deleniti!</P>
+      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur impedit architecto harum, nihil accusamus nisi delectus perspiciatis alias pariatur ducimus quae minima quo assumenda, aliquam laboriosam culpa dolores omnis deserunt.</P>
+   </div> 
+
+
+   
+<script>
+   
+   (function(){
+       'use strict';
+
+       var parargrafos = document.querySelectorAll('p');
+       console.log(parargrafos)
+
+       var x = 0;
+       while(parargrafos[x]){
+         parargrafos[x].textContent = x + ' - Essa pagina foi hackeada por Daniel';
+         x++;
+       }
+    })
+   </script>
+   
+</body>
+</html>
+
+

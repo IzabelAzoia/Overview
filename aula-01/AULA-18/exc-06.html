@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atrelando funções a eventos disparados por elementos no HTML</h1>
+    <h1>Funções void</h1>
+    <h2>Funções que não retornam nenhum valor. São úteis quando queremos reaproveitar código.</h2>
+    <h2>Problema</h2>
+    <p>Pedir para o usuario digitar um numero e mostrar a tabuada <br>
+    desse numero de 1 a 1000. <br>
+    Deve ter a possibilidade do usuario digitar outro numero e <br>
+     tambem de limar a tabuada gerada perviamente</p>
+     <button onclick="mostrarTabuada()">Criar Tabuada</button>
+     <button onclick="limparTabuada()">Limpar Tabuada</button>
+     <div id="output"></div>
+     <script>
+        function mostrarTabuada(){
+            // perguntar o numero parao usuario
+            var n = prompt('digite um numero');
+            limparTabuada();
+            // converter o numero
+            n = parseFloat(n);
+            // criar uma variavel que sirva de indice
+            var i = 1;
+            // enquanto indice <= 1000concatena na variavel mensagem
+            while(i <= 1000){
+                mensagem += n + ' x ' + i + ' = ' + (n * i) + '<br>';
+                i++;
+            }
+            output.innerHTML = mensagem;
+            // mostrar mensagem no output
+            
+        }
+        function limparTabuada(){
+            mensagem = '';
+            output.innerHTML = mensagem;
+        }
+        
+        
+        var output = document.querySelector('#output');
+        var mensagem = '';
+                 
+     </script>
+</body>
+</html>

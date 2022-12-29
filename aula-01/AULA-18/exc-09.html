@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin-top: 60px;
+        margin-left: 60px;
+    }
+    button{
+        background: rgb(106, 204, 143);
+        width: 60px;
+        border-radius: 8px;
+    }
+</style>
+</head>
+<body>
+
+<button onclick="calcular('+')">+</button>
+<button onclick="calcular('-')">-</button>
+<button onclick="calcular('*')">*</button>
+<button onclick="calcular('/')">/</button>
+<div id="output"></div>
+<script>
+    var n1 = prompt('digite um numero');
+    n1 = parseFloat(n1);
+    escreve();
+    function escreve(){
+        var output = document.querySelector('#output');
+        output.innerHTML = n1;
+    }
+    function calcular(simbolo){
+        var n = prompt('digite outro numero');
+        n = parseFloat(n);
+        // n1 = n1 + n;
+        // n1 += n;
+
+        switch(simbolo){
+            case '+':
+                n1 += n;
+                break;
+            case '-':
+                n1 -= n;
+                break;
+            case '*':
+                n1 *= n;
+                break;
+            case '/':
+                n1 /= n;
+        }
+        escreve();
+    } 
+
+</script>
+<body>
+    
+</body>
+</html>
