@@ -19,7 +19,7 @@
     </div>
 
     <script>
-        (function(){
+        (function() {
             var $cronometro = document.querySelector('#cronometro');
             var $iniciar = document.querySelector('#iniciar');
             var $pausar = document.querySelector('#pausar');
@@ -36,16 +36,20 @@
             var msTempoDecorrido = 0;
             var rodando = false;
 
-            function iniciar(){
-                if(rodando) return;
+            function iniciar() {
+                if (rodando)
+                {
+                    return;
+                } 
+               parar();     
                 msClickIniciar = Date.now();
                 iniciarCronometro();
                 rodando = true;
             }
             
-            function pausar(){
-                if(!$cronometro.value) return;
-                if(rodando){
+            function pausar() {
+                if (!$cronometro.value) return;
+                if (rodando) {
                     clearInterval(intervalo);
                     msClickPausar = Date.now();
                     msTempoDecorrido += (msClickPausar - msClickIniciar); 
@@ -56,7 +60,7 @@
                 rodando = !rodando;    
             }
             
-            function parar(){
+            function parar() {
                 msClickPausar = 0;
                 msClickIniciar = 0;
                 msTempoDecorrido = 0;
@@ -65,20 +69,21 @@
                 $cronometro.value = '';
             }
 
-            function iniciarCronometro(tempoDecorrido){
+            function iniciarCronometro(tempoDecorrido) {
                 var _ms = tempoDecorrido || 0;
-                intervalo = setInterval(function(){
-                    var msAgora = Date.now();
-                    var diferenca = msAgora - msClickIniciar;
-                    $cronometro.value = formataMs(diferenca + _ms);
-                }, 100)
+                intervalo = setInterval(
+                    function() {
+                        var msAgora = Date.now();
+                        var diferenca = msAgora - msClickIniciar;
+                        $cronometro.value = formataMs(diferenca + _ms);
+                    }, 100)
             }
 
-            function formataMs(ms){
+            function formataMs(ms) {
                 const MINUTO = 60 * 1000;
-                if(ms < 1000){
+                if (ms < 1000) {
                     return ms;
-                } else if(ms < MINUTO){
+                } else if (ms < MINUTO) {
                     var s = ms/1000;
                     s = parseInt(s);
                     var c = ms - (s * 1000);
@@ -87,15 +92,8 @@
                     var m = ms / MINUTO;
                     m = parseInt(m);
                     return m + ":" + formataMs( ms - m * MINUTO )
-
-                    // var s = ms / 1000 - (m * 60);
-                    // s = parseInt(s);
-                    // var c = ms - (s * 1000) - (m * MINUTO);
-                    // return m + ':' + s + ':' + c;
                 }
             }
-
-
         })()
     </script>
 </body>
